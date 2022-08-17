@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Online Election System</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="icon" href="images/icon.png">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+
+    <style>
+
+    body{
+      margin:0px;
+      padding:0px;
+    }
+      .headerFont{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 24px;
+      }
+
+      .subFont{
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        
+      }
+      
+      .specialHead{
+        font-family: 'Oswald', sans-serif;
+      }
+
+      .normalFont{
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+
+      a {
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+
+      a:link {
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+
+      /* visited link */
+      a:visited {
+          color: #FFFFFF;
+          text-decoration: none;
+      }
+
+      /* mouse over link */
+      a:hover {
+          color: #FFFFFF;
+          text-decoration: none;
+      }
+
+      /* selected link */
+      a:active {
+          color: #FFFFFF;
+          text-decoration: none;
+      }
+      .card{
+        border: 2px solid black;
+        border-radius: 6px;
+        margin-left: 5px;
+        padding: 5px;
+
+      }
+      .board{
+        display: flex;
+        text-align: center;
+        margin-left: 190px;
+      }
+
+
+    </style>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	
+	<div class="container">
+  	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse
+    " role="navigation">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-header">
+          
+          <a href="index.html" class="navbar-brand headerFont text-lg"><strong>Online Election System</strong></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="example-nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li><a href="#featuresTab"><span class="subFont"><strong>Features</strong></span></a></li>
+            <li><a href="#abhoutTab"><span class="subFont"><strong>About</strong></span></a></li>
+            <li><a href="#feedbackTab"><span class="subFont"><strong>Feedback</strong></span></a></li>
+        	
+          </ul>
+          
+
+          <span class="normalFont"><a href="admin.html" class="btn btn-success navbar-right navbar-btn"> <span class="glyphicon glyphicon-log-in"> </span><strong>&nbsp Admin Log-In</strong></a></span>
+
+          <!-- <button type="submit" class="btn btn-block span btn-primary "><span class="glyphicon glyphicon-log-in"></span> &nbsp Sign In</button> -->
+
+        </div>
+
+      </div> <!-- end of container -->
+    </nav>
+    </div>
+
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="jumbotron text-center text-block" style="padding-top:170px;">
+
+              <h2 style="color: black;">COVID - 19 cases currently running in&nbsp;<span id="country"></span>:&nbsp;&nbsp;<span id="datetime" style="color: black;"></span>&nbsp;<span id="currentTime"></span></h2>
+
+              <div class="board">
+        
+        <div class="card a"><i class="fa fa-tachometer"></i><h5>Active Cases</h5><span id="active"></span></div>
+        <div class="card ca"><i class="fa fa-th-list"></i><h5>Total Cases</h5><span id="cases"></span></div>
+
+        <div class="card t1"><i class="fa fa-plus"></i><h5>New Cases</h5><span id="newCases"></span></div>
+        
+
+        <div class="card cr"><i class="fa fa-times-circle"></i><h5>Critical Cases</h5><span id="critical"></span></div>
+        <div class="card t2"><i class="fa fa-plus-circle"></i><h5>New Deaths</h5><span id="newDeath"></span></div>
+        <div class="card d"><i class="fa fa-times"></i><h5>Total Deaths</h5><span id="death"></span></div>
+        <div class="card r"><i class="fa fa-check-square-o"></i><h5>Recovered Cases</h5><span id="recovered"></span></div>
+        <div class="card t"><i class="fa fa-eye"></i><h5>Total Testes Done</h5><span id="tests"></span></div>
+        
+      </div>
+            
+              <img src="images/ecs.png" alt="">
+                  <h1 class="specialHead">Online Election System</h1>
+                  <p class="normalFont">Secure . Authentic . Protected . Static </p>
+
+                  <a href="vault.html" class="btn btn-primary btn-md specialHead"> <span class="glyphicon glyphicon-hand-right"></span>&nbsp; Cast Your Vote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="conatiner" id="featuresTab">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="page-header" style="padding-top:50px;padding-bottom:50px">
+              <h1 class="normalFont" style="font-size:44px;" >What's the Purpose of this project?</h1>
+              <p class="subFont" style="font-size:24px;"><em>Solving Treditional Election System in the most secured Way.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="conatiner" style="padding:50px;" id="aboutTab">
+        <div class="row">
+
+          
+
+          <div class="col-sm-4 text-center">
+            
+            <img src="images/Nominee.png" width="100" height="100" alt=""/>
+            <!-- <h2 class="normalFont" style="font-size:28px;">VOTE ONLINE.</h2> -->
+
+            <a href="vault.html" class="normalFont" style="font-size:28px;"><h2 style="color: black">VOTE ONLINE.</h2></a>
+            <p><em>You Have To Put Here Basic Infos of Yours and Let Your Vote Counted.</em></p>
+
+          </div>
+          <div class="col-sm-4 text-center">
+
+            <img src="images/ecs.png" width="100" height="100" alt=""/>
+            <a href="nomination.html" class="normalFont" style="font-size:28px;"><h2 style="color: black">Nomination</h2></a>
+            <p><em>Check the full list of nominated Candidates here !!</em></p>
+
+          </div>
+          <div class="col-sm-4 text-center"> 
+            
+            <img src="images/Stats.png" width="100" height="100" alt=""/><!-- 
+			<h2 class="normalFont" style="font-size:28px;" >Statitics</h2> -->
+
+      <a href="stat.php" class="normalFont" style="font-size:28px;"><h2 style="color: black">Statitics</h2></a>
+            <p><em>Check out Graphical Representation of current situation of the Election !!</em></p>
+
+          </div>
+
+         
+        </div>
+      </div>
+        <hr>
+        <div class="container" id="feedbackTab">
+          <div class="row">
+            <div class="col-sm-12 text-center" style="">
+              <div class="page-header" style="padding-top:30px;padding-bottom:30px;">
+                <img src="images/MailBoy.png" width="100" height="100" alt="">
+                <br>
+                <h1 class="specialHead">CONTACT</h1>
+                <p style="font-size:16px;">If You want to share any suggestions regarding this Online Election System, you're welcome to give your suggestion. Or, any queries regarding this just knock me up below the links !! 😀</p>
+                
+              
+                <br>
+                <!-- <a class="btn btn-info" > <strong>Feedback</strong></a> -->
+				<a href=" " class="btn btn-primary btn-md specialHead"> <span class="glyphicon glyphicon-hand-down"></span>&nbsp Feedback</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 text-center">
+             <h2 class="specialHead">Md. Ridwan Sarker Turza</h2>
+            </div>
+            <div class="col-sm-6 text-center">
+              <!-- <img src="images/Facebook.png" width="50" height="50" alt=""> -->
+			  
+			       <a href="https://www.facebook.com/fledsoul/">
+				          <img src="images/Facebook.png" width="50" height="50" alt="">
+			       </a>
+				   <a href="https://github.com/rturza/">
+                  <img src="images/GitHub.jpg" width="50" height="50" alt="">
+					</a>
+				<a href="https://twitter.com/TurjoRidwanul/">
+                  <img src="images/Twitter.png" width="50" height="50" alt="">
+				</a>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+    
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+  fetch('https://corona.lmao.ninja/v2/countries/Bangladesh')
+.then((response) => {
+  return response.json();
+})
+.then((data) => {
+  console.log(data);
+  document.getElementById("country").innerHTML = data.country;
+  document.getElementById("active").innerHTML = data.active.toLocaleString();
+  document.getElementById("cases").innerHTML = data.cases.toLocaleString();
+  document.getElementById("critical").innerHTML = data.critical.toLocaleString();
+  document.getElementById("death").innerHTML = data.deaths.toLocaleString();
+  document.getElementById("recovered").innerHTML = data.recovered.toLocaleString();
+  document.getElementById("tests").innerHTML = data.tests.toLocaleString();
+  // document.getElementById("flag").src = data.countryInfo.flag;
+  document.getElementById("newCases").innerHTML = data.todayCases.toLocaleString();
+  document.getElementById("newDeath").innerHTML = data.todayDeaths.toLocaleString();
+});
+var dt = new Date();
+var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+
+  clock();  
+    function clock() {
+    var now = new Date();
+    var TwentyFourHour = now.getHours();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+    var mid = 'pm';
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (hour > 12) {
+      hour = hour - 12;
+    }    
+    if(hour==0){ 
+      hour=12;
+    }
+    if(TwentyFourHour < 12) {
+       mid = 'am';
+    }     
+  document.getElementById('currentTime').innerHTML =     hour+':'+min+':'+sec +' '+mid ;
+    setTimeout(clock, 1000);
+    }
+
+</script>
+  </body>
+</html>
